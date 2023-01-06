@@ -1,12 +1,14 @@
-const express=require("express")
-const app=express()
+const express = require("express")
+const app = express()
 const mongoose = require("mongoose")
-const clientRouter=require("./routes/clientRoute")
-const compteRouter=require("./routes/compteRoute")
-const loggingMiddelware=require("./middlewares/loggingMiddleware")
-/***********************************************/
+const clientRouter = require("./routes/clientRoute")
+const compteRouter = require("./routes/compteRoute")
+const loggingMiddelware = require("./middlewares/loggingMiddleware")
+const cors = require("cors")
 
 app.use(express.urlencoded({extended:true}))
+app.use(express.json())
+app.use(cors())
 
 require("dotenv").config()
 mongoose.connect(process.env.MONGO_URI)
@@ -18,8 +20,8 @@ mongoose.connect(process.env.MONGO_URI)
 }))
 .catch((err)=>console.log(err))
 
-app.use("/client", clientRouter)
-app.use("/compte", compteRouter)
+app.use("/clients", clientRouter)
+app.use("/comptes", compteRouter)
 app.use(loggingMiddelware.loggingUrls)
 app.use(loggingMiddelware.loggingParams)
 
