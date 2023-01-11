@@ -30,10 +30,18 @@ const deleteCompte=(req,res)=>{
         .catch(error=>res.status(404).json({msg:error}))
 }
 
+// Method PUT
+const updateCompte=(req,res)=>{
+    compteService.updateCompte(req.params.id, req.body)
+        .then(result=>res.status(200).json({result}))
+        .catch(error=>res.status(404).json({msg:error}))
+}
+
 
 module.exports={
     getAllComptes,
     getCompteById,
     createCompte,
-    deleteCompte
+    deleteCompte,
+    updateCompte
 }

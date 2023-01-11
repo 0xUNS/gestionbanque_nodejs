@@ -6,8 +6,8 @@ function Footer() {
         <footer>
             <Container>
                 <Row>
-                    <Col className="text-center py-3">
-                        Copyright &copy; 0xUns
+                    <Col className="text-center py-5">
+                        2023 &copy; 0xUns
                         &emsp; | &emsp;
                         <a href="https://gitlab.com/0xUns/gestionbanque_nodejs"><i class="fa-brands fa-gitlab"></i> Gitlab </a>
                     </Col>

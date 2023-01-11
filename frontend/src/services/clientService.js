@@ -16,8 +16,8 @@ async function create(client){
     return await http.post(`/clients/`,client)
 }
 
-async function update(client){
-    return await http.put(`/clients/${client._id}`,client)
+async function update(id, client){
+    return await http.put(`/clients/${id}`,client)
 }
 
 const clientService = { getAll, getById, deleteById, create, update }

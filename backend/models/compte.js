@@ -1,8 +1,11 @@
-const mongoose=require("mongoose")
+const mongoose = require("mongoose")
 
-const compteSchema=new mongoose.Schema({
+const compteSchema = new mongoose.Schema({
     solde:Number,
-    idC:String
+    idClient:{
+        type:mongoose.Types.ObjectId,
+        ref:"Client"
+    }
 })
-const Compte=mongoose.model("Compte", compteSchema)
-module.exports=Compte
+const Compte = mongoose.model("Compte", compteSchema)
+module.exports = Compte

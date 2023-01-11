@@ -6,6 +6,9 @@ import HomeScreen from './screens/HomeScreen';
 import ClientScreen from './screens/ClientScreen';
 import ClientCreate from './screens/ClientCreate';
 import ClientUpdate from './screens/ClientUpdate';
+import CompteScreen from './screens/CompteScreen';
+import CompteCreate from './screens/CompteCreate';
+import CompteUpdate from './screens/CompteUpdate';
 
 function App() {
   return (
@@ -18,6 +21,11 @@ function App() {
             <Route path='/client' element={<ClientScreen />} />
             <Route path='/client/create' element={<ClientCreate />} />
             <Route path='/client/edit/:id' element={<ClientUpdate />} />
+
+            <Route path='/compte' element={<CompteScreen />} />
+            <Route path='/compte/create' element={<CompteCreate />} />
+            <Route path='/compte/edit/:id' element={<CompteUpdate />} />
+
             <Route path='*' element={<h3>Page Introuvable</h3>} exact/>
           </Routes>
         </Container>

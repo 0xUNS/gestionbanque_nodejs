@@ -2,32 +2,32 @@ const client = require("../models/client")
 
 
 // Method GET
-const getAllClients=async()=>{
+const getAllClients = async()=>{
     return await client.find()
 }
 
 // Method GET By Id
-const getClientById=async(id)=>{
+const getClientById = async(id)=>{
     return await client.findOne({_id:id})
 }
 
 // Method POST
-const createClient=async(c)=>{
+const createClient = async(c)=>{
     return await client.create(c)
 }
 
 // Method DELETE
-const deleteClient=async(id)=>{
+const deleteClient = async(id)=>{
     return await client.findByIdAndDelete({_id:id})
 }
 
 // Method PUT
-const updateClient=async(id)=>{
-    return await client.findByIdAndDelete({_id:id})
+const updateClient = async(id, c)=>{
+    return await client.findByIdAndUpdate({_id:id}, c)
 }
 
 
-module.exports={
+module.exports = {
     getAllClients,
     getClientById,
     createClient,

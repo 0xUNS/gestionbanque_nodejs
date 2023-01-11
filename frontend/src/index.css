@@ -6,3 +6,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.rounded-pill-left {
+  border-radius: 50px 0px 0px 50px !important;
+}
+.rounded-pill-right {
+  --bs-btn-border-radius : 50px !important;
+}
+.rounded-pill-btn {
+  --bs-btn-border-radius : 50px !important;
+}
+.btn {
+  white-space: nowrap;
+}
+.nav-link {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
