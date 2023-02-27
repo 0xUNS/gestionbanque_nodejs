@@ -13,7 +13,7 @@ async function deleteById(id){
 }
 
 async function create(client){
-    return await http.post(`/clients/`,client)
+    return await http.post(`/clients`,client)
 }
 
 async function update(id, client){

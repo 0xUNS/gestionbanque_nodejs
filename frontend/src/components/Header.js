@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 function Header() {
     return (
         <header>
-            <Navbar bg="primary" variant="primary" expand="lg" collapseOnSelect>
+            <Navbar bg="primary" variant="primary" expand="sm" collapseOnSelect>
                 <Container>
                     <LinkContainer to='/'>
                         <Navbar.Brand><i className="fas fa-building-columns"></i>&ensp;<i class="fa-solid fa-n"></i><i class="fa-light fa-e"></i><i class="fa-solid fa-o"></i>&ensp;<i class="fa-solid fa-b"></i>ank</Navbar.Brand>
@@ -21,6 +21,11 @@ function Header() {
                                 <Nav.Link ><i className="fas fa-money-check-dollar"></i> Compte </Nav.Link>
                             </LinkContainer>
                         </Nav>
+                    </Navbar.Collapse>
+                    <Navbar.Collapse className="justify-content-end">
+                            <LinkContainer to='/login'>
+                                <Nav.Link ><i className="fas fa-user-circle"></i> Connexion </Nav.Link>
+                            </LinkContainer>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

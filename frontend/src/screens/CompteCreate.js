@@ -29,15 +29,15 @@ function CompteCreate(){
             <Form onSubmit={(element)=>submitCompte(element)}>
                 <Form.Group className="mb-3" controlId="solde">
                     <Form.Label>Solde</Form.Label>
-                    <Form.Control type="number" min="0" Value={solde} onChange={(element)=>setSolde(element.target.value)} placeholder="Entrer le solde" />
+                    <Form.Control type="number" min="0" value={solde} onChange={(element)=>setSolde(element.target.value)} placeholder="Entrer le solde" />
                 </Form.Group>
                 
                 <Form.Group className="mb-3" controlId="idClient">
                     <Form.Label>Client</Form.Label>
-                    <Form.Select Value={idClient} onChange={(element)=>setIdC(element.target.value)} required>
-                        <option Value="">Sélectionner un client</option>
+                    <Form.Select value={idClient} onChange={(element)=>setIdC(element.target.value)} required>
+                        <option value="">Sélectionner un client</option>
                         {clients?.map(client =>(
-                            <option Value={client._id}>{client.firstName} {client.lastName}</option>
+                            <option value={client._id}>{client.firstName} {client.lastName}</option>
                         ))}
                     </Form.Select>
                 </Form.Group>

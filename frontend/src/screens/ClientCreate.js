@@ -24,17 +24,17 @@ function ClientCreate(){
             <Form onSubmit={(element)=>submitClient(element)}>
                 <Form.Group className="mb-3" controlId="firstName">
                     <Form.Label>Prenom</Form.Label>
-                    <Form.Control type="text" Value={firstName} onChange={(element)=>setFirstName(element.target.value)} placeholder="Entrer le prenom" required/>
+                    <Form.Control type="text" value={firstName} onChange={(element)=>setFirstName(element.target.value)} placeholder="Entrer le prenom" required/>
                 </Form.Group>
                 
                 <Form.Group className="mb-3" controlId="lastName">
                     <Form.Label>Nom</Form.Label>
-                    <Form.Control type="text" Value={lastName} onChange={(element)=>setLastName(element.target.value)} placeholder="Entrer le nom" required/>
+                    <Form.Control type="text" value={lastName} onChange={(element)=>setLastName(element.target.value)} placeholder="Entrer le nom" required/>
                 </Form.Group>
                 
                 <Form.Group className="mb-3" controlId="address">
                     <Form.Label>Adresse</Form.Label>
-                    <Form.Control type="text" Value={address} onChange={(element)=>setAddress(element.target.value)} placeholder="Entrer une adresse valide" required/>
+                    <Form.Control type="text" value={address} onChange={(element)=>setAddress(element.target.value)} placeholder="Entrer une adresse valide" required/>
                     <Form.Text className="text-muted">
                     Entrer l'adresse complète contenant le nom de la ville et le code postal
                     </Form.Text>

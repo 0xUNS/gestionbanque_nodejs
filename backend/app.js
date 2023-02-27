@@ -3,6 +3,7 @@ const app = express()
 const mongoose = require("mongoose")
 const clientRouter = require("./routes/clientRoute")
 const compteRouter = require("./routes/compteRoute")
+const authRouter = require("./routes/authRoute")
 const loggingMiddelware = require("./middlewares/loggingMiddleware")
 const cors = require("cors")
 
@@ -12,16 +13,16 @@ app.use(cors())
 
 require("dotenv").config()
 mongoose.connect(process.env.MONGO_URI)
-.then((result)=>app.listen(8080,()=>{
-    var date_time = new Date();
-    console.log(date_time);
-    console.log("Server is running at http://127.0.0.1:8080/")
-    console.log("To exit, press Ctrl+C ");
+.then((result)=>app.listen(process.env.PORT,()=>{
+    console.log(new Date() + 
+    "\n Server is running at http://127.0.0.1:"+process.env.PORT+"/"+
+    "\n To exit, press Ctrl+C ");
 }))
 .catch((err)=>console.log(err))
 
 app.use("/clients", clientRouter)
 app.use("/comptes", compteRouter)
+app.use("/auth", authRouter)
 app.use(loggingMiddelware.loggingUrls)
 app.use(loggingMiddelware.loggingParams)
 

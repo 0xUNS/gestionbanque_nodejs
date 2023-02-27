@@ -13,7 +13,7 @@ async function deleteById(id){
 }
 
 async function create(compte){
-    return await http.post(`/comptes/`,compte)
+    return await http.post(`/comptes`,compte)
 }
 
 async function update(id, compte){

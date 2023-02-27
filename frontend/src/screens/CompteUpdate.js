@@ -38,16 +38,16 @@ function CompteUpdate(){
     <Form onSubmit={(element)=>submitCompte(element)}>
         <Form.Group className="mb-3" controlId="solde">
             <Form.Label>Solde</Form.Label>
-            <Form.Control type="number" min="0" Value={solde} onChange={(element)=>setSolde(element.target.value)} placeholder="Entrer le solde" />
+            <Form.Control type="number" min="0" value={solde} onChange={(element)=>setSolde(element.target.value)} placeholder="Entrer le solde" />
         </Form.Group>
         
         <Form.Group className="mb-3" controlId="idClient">
             <Form.Label>Client</Form.Label>
-            <Form.Select Value={idClient} onChange={(element)=>setIdC(element.target.value)} required>
+            <Form.Select value={idClient} onChange={(element)=>setIdC(element.target.value)} required>
                 {clients?.map(client =>(
-                    ( idClient === client._id )
-                    ? <option selected Value={client._id}>{client.firstName} {client.lastName}</option>
-                    : <option Value={client._id}>{client.firstName} {client.lastName}</option>
+                    <option {...idClient === client._id ? {selected:true} : {}} Key={client.id} value={client.id}>
+                    {client.firstName} {client.lastName}
+                    </option>
                 ))}
             </Form.Select>
         </Form.Group>

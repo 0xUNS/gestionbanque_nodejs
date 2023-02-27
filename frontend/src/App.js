@@ -9,6 +9,8 @@ import ClientUpdate from './screens/ClientUpdate';
 import CompteScreen from './screens/CompteScreen';
 import CompteCreate from './screens/CompteCreate';
 import CompteUpdate from './screens/CompteUpdate';
+import LoginCreate from './screens/LoginCreate';
+import LoginScreen from './screens/LoginScreen';
 
 function App() {
   return (
@@ -25,6 +27,9 @@ function App() {
             <Route path='/compte' element={<CompteScreen />} />
             <Route path='/compte/create' element={<CompteCreate />} />
             <Route path='/compte/edit/:id' element={<CompteUpdate />} />
+
+            <Route path='/login/create' element={<LoginCreate />} />
+            <Route path='/login/' element={<LoginScreen />} />
 
             <Route path='*' element={<h3>Page Introuvable</h3>} exact/>
           </Routes>
