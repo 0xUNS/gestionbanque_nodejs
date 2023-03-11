@@ -44,7 +44,7 @@ function LoginScreen() {
                             <Button variant="primary" className="rounded-pill" type="submit">
                                 Se connecter
                             </Button>
-                            <Button onClick={() => navigate("/login/create")} variant="outline-secondary" className="rounded-pill">
+                            <Button onClick={() => navigate("/signup")} variant="outline-secondary" className="rounded-pill">
                                 Créer un compte
                             </Button>
                         </Stack>

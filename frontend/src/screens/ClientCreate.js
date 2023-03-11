@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Form, Button, Stack } from 'react-bootstrap'
 import clientService from '../services/clientService'
 
-function ClientCreate(){
+function ClientCreate(auth){
     const [firstName,setFirstName] = useState("")
     const [lastName,setLastName] = useState("")
     const [address,setAddress] = useState("")
